@@ -1,9 +1,13 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
+import Header from './src/components/Header'
 
 const App = () => {
     return (
-        <Text>Some Text</Text>
+      <View>
+        <Header />
+      </View>
+
     )
 }
 
