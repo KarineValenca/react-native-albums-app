@@ -1,6 +1,7 @@
 import React from 'react'
-import { View, Text, StyleSheet, FlatList } from 'react-native'
+import { View, FlatList } from 'react-native'
 import useResults from '../hooks/useResults'
+import AlbumDetail from './AlbumDetail'
 
 const AlbumList = () => {
     const [results, errorMessage] = useResults()
@@ -12,16 +13,12 @@ const AlbumList = () => {
                 keyExtractor={(result) => result.title}
                 renderItem={({ item }) => {
                     return (
-                        <Text>{item.title}</Text>
+                       <AlbumDetail item={item}/>
                     )
                 }}
             />
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-
-})
 
 export default AlbumList
