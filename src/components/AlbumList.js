@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, FlatList } from 'react-native'
+import { SafeAreaView, FlatList } from 'react-native'
 import useResults from '../hooks/useResults'
 import AlbumDetail from './AlbumDetail'
 
@@ -7,7 +7,7 @@ const AlbumList = () => {
     const [results, errorMessage] = useResults()
 
     return(
-        <View>
+        <SafeAreaView style={{ flex: 1 }}>
             <FlatList 
                 data={results}
                 keyExtractor={(result) => result.title}
@@ -17,7 +17,7 @@ const AlbumList = () => {
                     )
                 }}
             />
-        </View>
+        </SafeAreaView>
     )
 }
 
